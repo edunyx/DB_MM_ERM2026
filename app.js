@@ -9,7 +9,6 @@
    - Estado "success" se asigna por integrante según el requerimiento
    - El botón "View map" abre Google Maps en las coordenadas
    ===================================================================== */
-
 const MESAS = [
   // ===============================================================
   // MESA 061396
@@ -30,7 +29,7 @@ const MESAS = [
       {
         cargo: 'SECRETARIO',
         apellidosNombres: 'ANA MARIA MEZA LEON',
-        celular: '',
+        celular: '967052237',
         dni: '40543952',
         direccion: 'AV. MANUEL DE LA TORRE 499 URB. LOS FICUS',
         coords: { lat: -12.051639, lng: -76.970139 },
@@ -48,7 +47,7 @@ const MESAS = [
       {
         cargo: 'PRIMER SUPLENTE',
         apellidosNombres: 'ELIZABETH MOISES ORE DE CORILLA',
-        celular: '',
+        celular: '971731842',
         dni: '41007813',
         direccion: 'AAHH SAN MARCOS MZ. A LOTE 09',
         coords: { lat: -12.037083, lng: -76.962250 },
@@ -57,8 +56,8 @@ const MESAS = [
       {
         cargo: 'SEGUNDO SUPLENTE',
         apellidosNombres: 'IVAN CESAR MONGE VALENZUELA',
-        celular: '',
-        dni: '',
+        celular: '994616267',
+        dni: '10050960',
         direccion: 'JR. EL QUETZAL 146 URB. SANTA ANITA',
         coords: { lat: -12.048556, lng: -76.965083 },
         estado: 'success'
@@ -66,8 +65,8 @@ const MESAS = [
       {
         cargo: 'TERCER SUPLENTE',
         apellidosNombres: 'ALDAIR RODRIGO MORALES SANTIAGO',
-        celular: '',
-        dni: '',
+        celular: '991222234',
+        dni: '73663044',
         direccion: 'CALLE JOSE CARLOS MARIATEGUI 155 COOP. LA UNIVERSAL',
         coords: { lat: -12.041389, lng: -76.979806 },
         estado: ''
@@ -75,7 +74,7 @@ const MESAS = [
       {
         cargo: 'CUARTO SUPLENTE',
         apellidosNombres: 'JUAN CARLOS MONDRAGON HEREDIA',
-        celular: '',
+        celular: '952606642',
         dni: '44772770',
         direccion: 'URB. LOS PRODUCTORES MZ. L LOTE 12',
         coords: { lat: -12.035028, lng: -76.953417 },
@@ -84,7 +83,7 @@ const MESAS = [
       {
         cargo: 'QUINTO SUPLENTE',
         apellidosNombres: 'OLENKA NICOLE MITMA MONTALVO',
-        celular: '',
+        celular: '954710891',
         dni: '75693581',
         direccion: 'ASOC. LA ENCALADA MZ. Ñ LOTE 11',
         coords: { lat: -12.032722, lng: -76.958806 },
@@ -93,8 +92,8 @@ const MESAS = [
       {
         cargo: 'SEXTO SUPLENTE',
         apellidosNombres: 'LENER MONTOYA FERNANDEZ',
-        celular: '',
-        dni: '',
+        celular: '916384386, 971731842',
+        dni: '40130877',
         direccion: 'JR. LOS CANARIOS 313 SANTA ANITA',
         coords: { lat: -12.048222, lng: -76.967111 },
         estado: ''
@@ -121,7 +120,7 @@ const MESAS = [
       {
         cargo: 'SECRETARIO',
         apellidosNombres: 'JOSE NINA CALDERON',
-        celular: '',
+        celular: '969988587',
         dni: '42023025',
         direccion: 'CULTURA WARI 310 COOP. LOS CHANCAS DE ANDAHUAYLAS',
         coords: { lat: -12.041306, lng: -76.970917 },
@@ -139,7 +138,7 @@ const MESAS = [
       {
         cargo: 'PRIMER SUPLENTE',
         apellidosNombres: 'MARISOL MOZOMBITE SHUÑA',
-        celular: '',
+        celular: '988633159, 13617492',
         dni: '10124838',
         direccion: 'CALLE JUSTINIANO MINAYA SOSA 380 COOP. VIV. LA UNIVERSAL',
         coords: { lat: -12.043306, lng: -76.977472 },
@@ -157,7 +156,7 @@ const MESAS = [
       {
         cargo: 'TERCER SUPLENTE',
         apellidosNombres: 'DIEGO ARMANDO NEYRA HUAMAN',
-        celular: '',
+        celular: '976098409',
         dni: '48187335',
         direccion: 'ASOC. PROP. PRADERAS DE SANTA ANITA ETAPA 2 MZ.V LOTE 12',
         coords: { lat: -12.027833, lng: -76.964583 },
@@ -175,8 +174,8 @@ const MESAS = [
       {
         cargo: 'QUINTO SUPLENTE',
         apellidosNombres: 'JHON MANUEL NINA CABALLERO',
-        celular: '',
-        dni: '',
+        celular: '990778759',
+        dni: '21262908',
         direccion: 'CALLE MARIA PARADO DE BELLIDO 363 COOP. UNIVERSAL ETAPA',
         coords: { lat: -12.043167, lng: -76.982611 },
         estado: 'success'
@@ -184,7 +183,7 @@ const MESAS = [
       {
         cargo: 'SEXTO SUPLENTE',
         apellidosNombres: 'MIRIAM LILIANA NUÑEZ MILLAN',
-        celular: '',
+        celular: '912389300, 965672240',
         dni: '21262908',
         direccion: 'CALLE LOS JILGUEROS 369 URB. SANTA ANITA 2DO SECTOR',
         coords: { lat: -12.047556, lng: -76.966806 },
@@ -193,7 +192,7 @@ const MESAS = [
     ]
   },
 
-    // ===============================================================
+  // ===============================================================
   // MESA 061399
   // ===============================================================
   {
@@ -230,7 +229,7 @@ const MESAS = [
       {
         cargo: 'PRIMER SUPLENTE',
         apellidosNombres: 'GIANFRANCO JESUS PEREZ ORELLANA',
-        celular: '',
+        celular: '971271007',
         dni: '72510461',
         direccion: 'CALLE ANTONIO PORTUGAL 721 URB. LOS FICUS',
         coords: { lat: -12.048611, lng: -76.973333 },
@@ -239,8 +238,8 @@ const MESAS = [
       {
         cargo: 'SEGUNDO SUPLENTE',
         apellidosNombres: 'RUTH ELENA PARRA WILLIAMS',
-        celular: '',
-        dni: '',
+        celular: '940298671',
+        dni: '06131287',
         direccion: 'EL QUETZAL 137 URB. SANTA ANITA',
         coords: { lat: -12.048556, lng: -76.965250 },
         estado: 'success'
@@ -248,7 +247,7 @@ const MESAS = [
       {
         cargo: 'TERCER SUPLENTE',
         apellidosNombres: 'JORGE LUIS PANLLO HUARANGA',
-        celular: '',
+        celular: '997364405',
         dni: '71056146',
         direccion: 'PSJ. SIETE ENSAYOS MZ. 12 LOTE 10',
         coords: { lat: -12.035722, lng: -76.953389 },
@@ -257,7 +256,7 @@ const MESAS = [
       {
         cargo: 'CUARTO SUPLENTE',
         apellidosNombres: 'JAVIER GREGORIO PEÑA DE LA CRUZ',
-        celular: '',
+        celular: '979629038, 970348853',
         dni: '41090114',
         direccion: 'MZ. B LOTE 23 SANTA AURELIA',
         coords: { lat: -12.037583, lng: -76.952389 },
@@ -275,8 +274,8 @@ const MESAS = [
       {
         cargo: 'SEXTO SUPLENTE',
         apellidosNombres: 'RENZO RAUL PEREZ IRCAÑAUPA',
-        celular: '',
-        dni: '',
+        celular: '986260956',
+        dni: '76821578',
         direccion: 'AMPLIACION LAS PRADERAS CALLE VIRU MZ. A2 LOTE 20',
         coords: { lat: -12.033999, lng: -76.964639 },
         estado: 'success'
@@ -284,7 +283,6 @@ const MESAS = [
     ]
   }
 ];
-
 /* =====================================================================
    RENDERIZADO
    ===================================================================== */
