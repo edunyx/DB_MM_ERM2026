@@ -6,8 +6,9 @@
    ---------------------------------------------------------------------
    - celular: números que ya estaban en la página (string con comas)
    - celularesExtra: array de strings con números nuevos a verificar
-   - estado: '', 'success', 'notification', etc.
+   - estado: '', 'success', 'notification', 'not found', 'unknow'
    - nota: texto opcional que se muestra debajo del badge de estado
+   - certificado: ruta opcional al PDF del certificado
    - Los descartes se guardan en localStorage bajo 'descartados_celulares'
    ===================================================================== */
 const MESAS = [
@@ -48,7 +49,7 @@ const MESAS = [
         dni: '17930902',
         direccion: 'JR. LOS ZORZALES 114',
         coords: { lat: -12.053222, lng: -76.962917 },
-        estado: 'success',
+        estado: 'unknown',
         nota: ''
       },
       {
@@ -92,7 +93,7 @@ const MESAS = [
         dni: '44772770',
         direccion: 'URB. LOS PRODUCTORES MZ. L LOTE 12',
         coords: { lat: -12.035028, lng: -76.953417 },
-        estado: '',
+        estado: 'not found',
         nota: ''
       },
       {
@@ -135,7 +136,7 @@ const MESAS = [
         dni: '75038773',
         direccion: 'CALLE SAN MARCOS MZ. C LOTE 5 AH. SAN MARCOS DE ATE SECTOR',
         coords: { lat: -12.041861, lng: -76.962750 },
-        estado: '',
+        estado: 'unknow',
         nota: ''
       },
       {
@@ -146,7 +147,7 @@ const MESAS = [
         dni: '42023025',
         direccion: 'CULTURA WARI 310 COOP. LOS CHANCAS DE ANDAHUAYLAS',
         coords: { lat: -12.041306, lng: -76.970917 },
-        estado: '',
+        estado: 'success',
         nota: ''
       },
       {
@@ -160,7 +161,7 @@ const MESAS = [
         dni: '43258039',
         direccion: 'CALLE LAS PERDICES 455 PISO 3',
         coords: { lat: -12.051778, lng: -76.965056 },
-        estado: '',
+        estado: 'unknow',
         nota: ''
       },
       {
@@ -171,7 +172,7 @@ const MESAS = [
         dni: '10124838',
         direccion: 'CALLE JUSTINIANO MINAYA SOSA 380 COOP. VIV. LA UNIVERSAL',
         coords: { lat: -12.043306, lng: -76.977472 },
-        estado: '',
+        estado: 'not found',
         nota: ''
       },
       {
@@ -182,7 +183,7 @@ const MESAS = [
         dni: '09362697',
         direccion: 'LAS GOLONDRINAS 431',
         coords: { lat: -12.051333, lng: -76.964139 },
-        estado: '',
+        estado: 'not found',
         nota: ''
       },
       {
@@ -199,12 +200,12 @@ const MESAS = [
       {
         cargo: 'CUARTO SUPLENTE',
         apellidosNombres: 'ANABEL NICOL NOREÑA CONDORI',
-        celular: '',
+        celular: '934169336',
         celularesExtra: [],
         dni: '72319486',
         direccion: 'ASOC. MONTERREY MZ. B LOTE 30',
         coords: { lat: -12.043556, lng: -76.955972 },
-        estado: '',
+        estado: 'success',
         nota: ''
       },
       {
@@ -226,7 +227,7 @@ const MESAS = [
         dni: '21262908',
         direccion: 'CALLE LOS JILGUEROS 369 URB. SANTA ANITA 2DO SECTOR',
         coords: { lat: -12.047556, lng: -76.966806 },
-        estado: '',
+        estado: 'not found',
         nota: ''
       }
     ]
@@ -243,11 +244,11 @@ const MESAS = [
         cargo: 'PRESIDENTE',
         apellidosNombres: 'YULY PAREJA LANDA',
         celular: '997438909',
-        celularesExtra: ['957242965', '13682919'],
+        celularesExtra: ['', ''],
         dni: '40208374',
         direccion: 'ASOC. SAPOTAL MZ. E9 LOTE 33',
         coords: { lat: -12.043722, lng: -76.949917 },
-        estado: '',
+        estado: 'success',
         nota: ''
       },
       {
@@ -255,13 +256,13 @@ const MESAS = [
         apellidosNombres: 'ESTHER MELISSA PEÑA OSCO',
         celular: '934845556',
         celularesExtra: [
-          '963347249', '15958462', '11428156', '604492426',
-          '1428156', '51963347249', '955308281'
+          '', '', '', '',
+          '', '', ''
         ],
         dni: '45391294',
         direccion: 'URB. LOS CEDROS MZ. E-5 LOTE 12',
         coords: { lat: -12.042361, lng: -76.951889 },
-        estado: '',
+        estado: 'success',
         nota: ''
       },
       {
@@ -275,7 +276,7 @@ const MESAS = [
         dni: '16803541',
         direccion: 'PARQUE 3 URB. SAN CARLOS MZ. U LOTE 2',
         coords: { lat: -12.035556, lng: -76.959028 },
-        estado: '',
+        estado: 'unknow',
         nota: ''
       },
       {
@@ -286,7 +287,7 @@ const MESAS = [
         dni: '72510461',
         direccion: 'CALLE ANTONIO PORTUGAL 721 URB. LOS FICUS',
         coords: { lat: -12.048611, lng: -76.973333 },
-        estado: '',
+        estado: 'not found',
         nota: ''
       },
       {
@@ -298,7 +299,8 @@ const MESAS = [
         direccion: 'EL QUETZAL 137 URB. SANTA ANITA',
         coords: { lat: -12.048556, lng: -76.965250 },
         estado: 'success',
-        nota: ''
+        nota: '',
+        /*certificado: 'certificados/ruth-elena-parra-williams.pdf'*/
       },
       {
         cargo: 'TERCER SUPLENTE',
@@ -334,7 +336,7 @@ const MESAS = [
         dni: '47993458',
         direccion: 'CALLE 23 ASOC. RESIDENCIAL SANTA ANITA MZ.B9 LOTE 37',
         coords: { lat: -12.040083, lng: -76.951222 },
-        estado: '',
+        estado: 'unknow',
         nota: ''
       },
       {
@@ -387,6 +389,19 @@ function descartarNumero(numero) {
 }
 
 /* =====================================================================
+   DESCARTADOS POR DEFECTO (se tachan al cargar)
+   ===================================================================== */
+const DESCARTADOS_DEFECTO = ['942088960', '978536258', '994615929'];
+(function aplicarDescartadosDefecto() {
+  const actuales = getDescartados();
+  let cambio = false;
+  DESCARTADOS_DEFECTO.forEach(n => {
+    if (!actuales.includes(n)) { actuales.push(n); cambio = true; }
+  });
+  if (cambio) setDescartados(actuales);
+})();
+
+/* =====================================================================
    RENDERIZADO
    ===================================================================== */
 
@@ -434,19 +449,32 @@ function crearFila(i) {
   // Cargo
   tr.appendChild(crearCelda(i.cargo));
 
-  // Apellidos y nombres
-  tr.appendChild(crearCelda(i.apellidosNombres));
+  // Apellidos y nombres (+ botón certificado si aplica)
+  const tdNombre = document.createElement('td');
+  tdNombre.textContent = i.apellidosNombres;
 
-  // Celular (lista de números con botón descartar)
+  if (i.certificado) {
+    const link = document.createElement('a');
+    link.className = 'btn-certificado';
+    link.href = i.certificado;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.innerHTML = '📄 Ver Certificado';
+    tdNombre.appendChild(link);
+  }
+
+  tr.appendChild(tdNombre);
+
+  // Celular
   tr.appendChild(crearCeldaCelulares(i));
 
-  // DNI (in process si está vacío)
+  // DNI
   tr.appendChild(crearCelda(i.dni || 'in process', 'dato-numerico'));
 
   // Dirección
   tr.appendChild(crearCelda(i.direccion));
 
-  // Estado + nota opcional
+  // Estado + nota
   const tdEstado = document.createElement('td');
   const span = document.createElement('span');
   span.className = `estado ${claseEstado(i.estado)}`;
@@ -495,7 +523,6 @@ function crearCeldaCelulares(integrante) {
   const td = document.createElement('td');
   td.className = 'dato-numerico celda-celulares';
 
-  // Unir números: los de `celular` (separados por coma) + los de `celularesExtra`
   const existentes = (integrante.celular || '')
     .split(',')
     .map(s => s.trim())
@@ -557,6 +584,8 @@ function claseEstado(e = '') {
   const x = String(e).toUpperCase();
   if (x.includes('SUCCESS'))      return 'success';
   if (x.includes('NOTIFICATION')) return 'notification';
+  if (x.includes('NOT FOUND'))    return 'not-found';
+  if (x.includes('UNKNOW'))       return 'unknow';
   if (x.includes('NO ASISTIRA'))  return 'no-asistira';
   if (x.includes('ENTREGADO'))    return 'entregado';
   return 'sin-estado';

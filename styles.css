@@ -149,7 +149,6 @@ table {
 
   td:last-child { border-bottom: none; }
 
-  /* Etiqueta a la izquierda (data-label) */
   td::before {
     content: attr(data-label);
     font-weight: 600;
@@ -161,7 +160,6 @@ table {
     text-align: left;
   }
 
-  /* Cargo destacado como título de tarjeta */
   td[data-label="Cargo"] {
     background: #f8faff;
     margin: -0.6rem -0.9rem 0.4rem -0.9rem;
@@ -178,7 +176,6 @@ table {
     display: none;
   }
 
-  /* Botón de mapa centrado */
   td[data-label="Mapa"] {
     justify-content: flex-start;
     text-align: left;
@@ -190,7 +187,6 @@ table {
     margin-right: 0.6rem;
   }
 
-  /* Estado */
   td[data-label="Estado"] {
     align-items: center;
   }
@@ -212,18 +208,33 @@ table {
   min-width: 92px;
 }
 
-/* Success: verde tenue + borde izquierdo verde (credencial entregada) */
+/* Success: verde tenue MÁS NOTORIO */
 .estado.success {
-  background: #e3f2e9;
-  color: #0b4f2c;
-  border-left: 3px solid #4caf7d;
+  background: #c8e6c9;
+  color: #0b3d1f;
+  border-left: 3px solid #2e7d32;
+  font-weight: 600;
 }
 
-/* Notification: naranja tenue + borde izquierdo naranja */
+/* Notification: naranja tenue */
 .estado.notification {
   background: #fff4d6;
   color: #8a5a00;
   border-left: 3px solid #e0a83a;
+}
+
+/* Not found: rojo tenue */
+.estado.not-found {
+  background: #ffe9e9;
+  color: #a12b2b;
+  border-left: 3px solid #e53935;
+}
+
+/* Unknow: gris neutro */
+.estado.unknow {
+  background: #eef2f7;
+  color: #4a5a72;
+  border-left: 3px solid #94a3b8;
 }
 
 .estado.in-process { background: #fff4d6; color: #8a5a00; }
@@ -231,7 +242,7 @@ table {
 .estado.entregado  { background: #e4edfb; color: #1b4a8b; }
 .estado.sin-estado { background: #f0f0f0; color: #5a5a5a; }
 
-/* Nota debajo del badge de estado (ej: EN ESPAÑA, PROVINCIA) */
+/* Nota debajo del badge de estado */
 .estado-nota {
   display: block;
   margin-top: 5px;
@@ -266,6 +277,27 @@ table {
   height: 13px;
 }
 
+/* ========== BOTÓN VER CERTIFICADO ========== */
+.btn-certificado {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  padding: 0.35rem 0.75rem;
+  background: #1565c0;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(21, 101, 192, 0.25);
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.btn-certificado:hover { background: #0d47a1; }
+.btn-certificado:active { transform: scale(0.96); }
+
 /* ========== LISTA DE CELULARES CON DESCARTE ========== */
 .celda-celulares {
   vertical-align: top;
@@ -291,14 +323,12 @@ table {
   color: #1f2c3e;
 }
 
-/* Número descartado: tachado + gris */
 .celular-item.descartado .celular-numero {
   text-decoration: line-through;
   text-decoration-thickness: 1.5px;
   color: #9aa3b2;
 }
 
-/* Botón ✗ para descartar */
 .btn-descartar {
   background: #ffe9e9;
   color: #a12b2b;
@@ -318,15 +348,9 @@ table {
   flex: 0 0 auto;
 }
 
-.btn-descartar:hover {
-  background: #ffd4d4;
-}
+.btn-descartar:hover { background: #ffd4d4; }
+.btn-descartar:active { transform: scale(0.9); }
 
-.btn-descartar:active {
-  transform: scale(0.9);
-}
-
-/* En móvil, la celda de celulares debe alinearse a la izquierda */
 @media (max-width: 899px) {
   td.celda-celulares {
     align-items: flex-start;
@@ -342,7 +366,6 @@ table {
     flex: 1 1 auto;
   }
 
-  /* Nota en móvil: alineada a la derecha */
   .estado-nota {
     text-align: right;
     width: 100%;
@@ -372,13 +395,8 @@ table {
     align-items: center;
   }
 
-  .estado {
-    min-width: auto;
-  }
-
-  .estado-nota {
-    text-align: left;
-  }
+  .estado { min-width: auto; }
+  .estado-nota { text-align: left; }
 }
 
 /* ========== HEADER ========== */
@@ -479,24 +497,14 @@ table {
     margin-bottom: 1rem;
   }
 
-  .header-titulo {
-    font-size: 1.3rem;
-  }
-
-  .header-sub {
-    font-size: 0.8rem;
-  }
+  .header-titulo { font-size: 1.3rem; }
+  .header-sub { font-size: 0.8rem; }
 
   .footer {
     margin-top: 2rem;
     padding: 1.2rem 0.8rem;
   }
 
-  .footer-linea {
-    font-size: 0.88rem;
-  }
-
-  .footer-sub {
-    font-size: 0.72rem;
-  }
+  .footer-linea { font-size: 0.88rem; }
+  .footer-sub { font-size: 0.72rem; }
 }
