@@ -10,12 +10,12 @@ const MESAS = [
       {
         cargo: 'PRESIDENTE',
         apellidosNombres: 'PILAR MORALES CARRANZA',
-        celular: '',
+        celular: '972248593',
         celularesExtra: ['', '', '', ''],
         dni: '76566756',
         direccion: 'CALLE 4 CP NOCHETO MZ. B LOTE 3',
         coords: { lat: -12.044805, lng: -76.985083 },
-        estado: 'not found - in process',
+        estado: 'Pending',
         nota: ''
       },
       {
@@ -48,7 +48,7 @@ const MESAS = [
         dni: '41007813',
         direccion: 'AAHH SAN MARCOS MZ. A LOTE 09',
         coords: { lat: -12.037083, lng: -76.962250 },
-        estado: 'not found - in process',
+        estado: 'Pending',
         nota: ''
       },
       {
@@ -81,7 +81,7 @@ const MESAS = [
         dni: '44772770',
         direccion: 'URB. LOS PRODUCTORES MZ. L LOTE 12',
         coords: { lat: -12.035028, lng: -76.953417 },
-        estado: 'not found - in process',
+        estado: 'Pending',
         nota: ''
       },
       {
@@ -119,12 +119,12 @@ const MESAS = [
       {
         cargo: 'PRESIDENTE',
         apellidosNombres: 'HERMAN ALEJANDRO ONCEBAY LINO',
-        celular: '',
+        celular: '946859363',
         celularesExtra: [],
         dni: '75038773',
         direccion: 'CALLE SAN MARCOS MZ. C LOTE 5 AH. SAN MARCOS DE ATE SECTOR',
         coords: { lat: -12.041861, lng: -76.962750 },
-        estado: 'not found - in process',
+        estado: 'Pending',
         nota: ''
       },
       {
@@ -160,18 +160,18 @@ const MESAS = [
         dni: '10124838',
         direccion: 'CALLE JUSTINIANO MINAYA SOSA 380 COOP. VIV. LA UNIVERSAL',
         coords: { lat: -12.043306, lng: -76.977472 },
-        estado: 'not found',
+        estado: 'Pending',
         nota: ''
       },
       {
         cargo: 'SEGUNDO SUPLENTE',
         apellidosNombres: 'LILIAN CARMEN ROSINA MUÑOZ ZAPATA',
-        celular: '',
+        celular: '984273546',
         celularesExtra: [],
         dni: '09362697',
         direccion: 'LAS GOLONDRINAS 431',
         coords: { lat: -12.051333, lng: -76.964139 },
-        estado: 'not found - in process',
+        estado: 'Pending',
         nota: ''
       },
       {
@@ -182,7 +182,7 @@ const MESAS = [
         dni: '48187335',
         direccion: 'ASOC. PROP. PRADERAS DE SANTA ANITA ETAPA 2 MZ.V LOTE 12',
         coords: { lat: -12.027833, lng: -76.964583 },
-        estado: 'not found - in process',
+        estado: 'Pending',
         nota: ''
       },
       {
@@ -215,7 +215,7 @@ const MESAS = [
         dni: '21262908',
         direccion: 'CALLE LOS JILGUEROS 369 URB. SANTA ANITA 2DO SECTOR',
         coords: { lat: -12.047556, lng: -76.966806 },
-        estado: 'not found - in process',
+        estado: 'Pending',
         nota: ''
       }
     ]
@@ -256,7 +256,7 @@ const MESAS = [
       {
         cargo: 'TERCER MIEMBRO',
         apellidosNombres: 'YRINA ELIZABETH PASARA MOSCOL',
-        celular: '',
+        celular: '995000747',
         celularesExtra: [
           '', '', '', '',
           '', '', ''
@@ -264,7 +264,7 @@ const MESAS = [
         dni: '16803541',
         direccion: 'PARQUE 3 URB. SAN CARLOS MZ. U LOTE 2',
         coords: { lat: -12.035556, lng: -76.959028 },
-        estado: 'not found - in process',
+        estado: 'Pending',
         nota: ''
       },
       {
@@ -294,13 +294,13 @@ const MESAS = [
         cargo: 'TERCER SUPLENTE',
         apellidosNombres: 'JORGE LUIS PANLLO HUARANGA',
         celular: '997364405',
-        celularesExtra: [
+        celularesExtra: ['987253406'
 
         ],
         dni: '71056146',
         direccion: 'PSJ. SIETE ENSAYOS MZ. 12 LOTE 10',
         coords: { lat: -12.035722, lng: -76.953389 },
-        estado: 'not found - in process',
+        estado: 'Pending',
         nota: ''
       },
       {
@@ -311,18 +311,18 @@ const MESAS = [
         dni: '41090114',
         direccion: 'MZ. B LOTE 23 SANTA AURELIA',
         coords: { lat: -12.037583, lng: -76.952389 },
-        estado: 'notification',
+        estado: 'success',
         nota: 'PROVINCIA'
       },
       {
         cargo: 'QUINTO SUPLENTE',
         apellidosNombres: 'JUAN ANTONY PARRAGA TAIPE',
-        celular: '',
+        celular: ' 982372976',
         celularesExtra: [],
         dni: '47993458',
         direccion: 'CALLE 23 ASOC. RESIDENCIAL SANTA ANITA MZ.B9 LOTE 37',
         coords: { lat: -12.040083, lng: -76.951222 },
-        estado: 'not found - in process',
+        estado: 'Pending',
         nota: ''
       },
       {
