@@ -92,7 +92,7 @@ const MESAS = [
         dni: '75693581',
         direccion: 'ASOC. LA ENCALADA MZ. Ñ LOTE 11',
         coords: { lat: -12.032722, lng: -76.958806 },
-        estado: 'success',
+        estado: 'Pending',
         nota: ''
       },
       {
