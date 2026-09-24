@@ -1,16 +1,4 @@
-/* =====================================================================
-   DATOS DE LAS MESAS
-   ---------------------------------------------------------------------
-   Cada integrante: cargo, apellidosNombres, celular, celularesExtra,
-                    dni, direccion, coords { lat, lng }, estado, nota
-   ---------------------------------------------------------------------
-   - celular: números que ya estaban en la página (string con comas)
-   - celularesExtra: array de strings con números nuevos a verificar
-   - estado: '', 'success', 'notification', 'not found', 'unknow'
-   - nota: texto opcional que se muestra debajo del badge de estado
-   - certificado: ruta opcional al PDF del certificado
-   - Los descartes se guardan en localStorage bajo 'descartados_celulares'
-   ===================================================================== */
+
 const MESAS = [
   // ===============================================================
   // MESA 061396
@@ -22,12 +10,12 @@ const MESAS = [
       {
         cargo: 'PRESIDENTE',
         apellidosNombres: 'PILAR MORALES CARRANZA',
-        celular: '942088960',
-        celularesExtra: ['978536258', '912732573', '955221129', '735836087'],
+        celular: '',
+        celularesExtra: ['', '', '', ''],
         dni: '76566756',
         direccion: 'CALLE 4 CP NOCHETO MZ. B LOTE 3',
         coords: { lat: -12.044805, lng: -76.985083 },
-        estado: '',
+        estado: 'not found - in process',
         nota: ''
       },
       {
@@ -44,12 +32,12 @@ const MESAS = [
       {
         cargo: 'TERCER MIEMBRO',
         apellidosNombres: 'JOSE GILMER MIGUEL AGUILAR',
-        celular: '994615929',
-        celularesExtra: ['968510545', '954314824', '999967821', '14360001'],
+        celular: '968510545',
+        celularesExtra: ['', '', '', ''],
         dni: '17930902',
         direccion: 'JR. LOS ZORZALES 114',
         coords: { lat: -12.053222, lng: -76.962917 },
-        estado: 'unknown',
+        estado: 'success',
         nota: ''
       },
       {
@@ -60,7 +48,7 @@ const MESAS = [
         dni: '41007813',
         direccion: 'AAHH SAN MARCOS MZ. A LOTE 09',
         coords: { lat: -12.037083, lng: -76.962250 },
-        estado: '',
+        estado: 'not found - in process',
         nota: ''
       },
       {
@@ -77,34 +65,34 @@ const MESAS = [
       {
         cargo: 'TERCER SUPLENTE',
         apellidosNombres: 'ALDAIR RODRIGO MORALES SANTIAGO',
-        celular: '991222234',
-        celularesExtra: [],
+        celular: '932268843',
+        celularesExtra: ['991222234'],
         dni: '73663044',
         direccion: 'CALLE JOSE CARLOS MARIATEGUI 155 COOP. LA UNIVERSAL',
         coords: { lat: -12.041389, lng: -76.979806 },
-        estado: '',
+        estado: 'success',
         nota: ''
       },
       {
         cargo: 'CUARTO SUPLENTE',
         apellidosNombres: 'JUAN CARLOS MONDRAGON HEREDIA',
-        celular: '952606642',
-        celularesExtra: ['974221652', '987365868', '966122918', '991423403'],
+        celular: '966122918',
+        celularesExtra: ['952606642'],
         dni: '44772770',
         direccion: 'URB. LOS PRODUCTORES MZ. L LOTE 12',
         coords: { lat: -12.035028, lng: -76.953417 },
-        estado: 'not found',
+        estado: 'not found - in process',
         nota: ''
       },
       {
         cargo: 'QUINTO SUPLENTE',
         apellidosNombres: 'OLENKA NICOLE MITMA MONTALVO',
         celular: '954710891',
-        celularesExtra: ['978453326', '992661745', '984314163'],
+        celularesExtra: ['', '', ''],
         dni: '75693581',
         direccion: 'ASOC. LA ENCALADA MZ. Ñ LOTE 11',
         coords: { lat: -12.032722, lng: -76.958806 },
-        estado: '',
+        estado: 'success',
         nota: ''
       },
       {
@@ -136,7 +124,7 @@ const MESAS = [
         dni: '75038773',
         direccion: 'CALLE SAN MARCOS MZ. C LOTE 5 AH. SAN MARCOS DE ATE SECTOR',
         coords: { lat: -12.041861, lng: -76.962750 },
-        estado: 'unknow',
+        estado: 'not found - in process',
         nota: ''
       },
       {
@@ -155,20 +143,20 @@ const MESAS = [
         apellidosNombres: 'JUAN JOSE DANIEL NAVARRO CHUMBIMUNE',
         celular: '900144021',
         celularesExtra: [
-          '73612806', '998302024', '923833302', '931603554',
-          '73397092', '988613616', '5173612806', '933476488', '973088533'
+          '', '', '', '',
+          '', '', '', '', ''
         ],
         dni: '43258039',
         direccion: 'CALLE LAS PERDICES 455 PISO 3',
         coords: { lat: -12.051778, lng: -76.965056 },
-        estado: 'unknow',
-        nota: ''
+        estado: 'success',
+        nota: 'Piura'
       },
       {
         cargo: 'PRIMER SUPLENTE',
         apellidosNombres: 'MARISOL MOZOMBITE SHUÑA',
-        celular: '988633159, 13617492',
-        celularesExtra: ['953245908'],
+        celular: '988633159',
+        celularesExtra: [''],
         dni: '10124838',
         direccion: 'CALLE JUSTINIANO MINAYA SOSA 380 COOP. VIV. LA UNIVERSAL',
         coords: { lat: -12.043306, lng: -76.977472 },
@@ -183,18 +171,18 @@ const MESAS = [
         dni: '09362697',
         direccion: 'LAS GOLONDRINAS 431',
         coords: { lat: -12.051333, lng: -76.964139 },
-        estado: 'not found',
+        estado: 'not found - in process',
         nota: ''
       },
       {
         cargo: 'TERCER SUPLENTE',
         apellidosNombres: 'DIEGO ARMANDO NEYRA HUAMAN',
         celular: '976098409',
-        celularesExtra: ['975235335', '970773310', '940425823', '974324822'],
+        celularesExtra: ['', '', '', ''],
         dni: '48187335',
         direccion: 'ASOC. PROP. PRADERAS DE SANTA ANITA ETAPA 2 MZ.V LOTE 12',
         coords: { lat: -12.027833, lng: -76.964583 },
-        estado: '',
+        estado: 'not found - in process',
         nota: ''
       },
       {
@@ -222,12 +210,12 @@ const MESAS = [
       {
         cargo: 'SEXTO SUPLENTE',
         apellidosNombres: 'MIRIAM LILIANA NUÑEZ MILLAN',
-        celular: '912389300, 965672240',
-        celularesExtra: ['983434545', '51912389300'],
+        celular: ', 965672240',
+        celularesExtra: ['', ''],
         dni: '21262908',
         direccion: 'CALLE LOS JILGUEROS 369 URB. SANTA ANITA 2DO SECTOR',
         coords: { lat: -12.047556, lng: -76.966806 },
-        estado: 'not found',
+        estado: 'not found - in process',
         nota: ''
       }
     ]
@@ -270,24 +258,24 @@ const MESAS = [
         apellidosNombres: 'YRINA ELIZABETH PASARA MOSCOL',
         celular: '',
         celularesExtra: [
-          '916947140', '989221087', '991318453', '991169171',
-          '942731135', '980636227', '922125950'
+          '', '', '', '',
+          '', '', ''
         ],
         dni: '16803541',
         direccion: 'PARQUE 3 URB. SAN CARLOS MZ. U LOTE 2',
         coords: { lat: -12.035556, lng: -76.959028 },
-        estado: 'unknow',
+        estado: 'not found - in process',
         nota: ''
       },
       {
         cargo: 'PRIMER SUPLENTE',
         apellidosNombres: 'GIANFRANCO JESUS PEREZ ORELLANA',
         celular: '971271007',
-        celularesExtra: ['949858705'],
+        celularesExtra: [''],
         dni: '72510461',
         direccion: 'CALLE ANTONIO PORTUGAL 721 URB. LOS FICUS',
         coords: { lat: -12.048611, lng: -76.973333 },
-        estado: 'not found',
+        estado: 'success',
         nota: ''
       },
       {
@@ -307,21 +295,19 @@ const MESAS = [
         apellidosNombres: 'JORGE LUIS PANLLO HUARANGA',
         celular: '997364405',
         celularesExtra: [
-          '940650030', '991661241', '948790025', '987719170',
-          '997407061', '912372007', '51997364405', '940120438',
-          '993897045', '972327835', '957368029'
+
         ],
         dni: '71056146',
         direccion: 'PSJ. SIETE ENSAYOS MZ. 12 LOTE 10',
         coords: { lat: -12.035722, lng: -76.953389 },
-        estado: '',
+        estado: 'not found - in process',
         nota: ''
       },
       {
         cargo: 'CUARTO SUPLENTE',
         apellidosNombres: 'JAVIER GREGORIO PEÑA DE LA CRUZ',
         celular: '979629038, 970348853',
-        celularesExtra: ['932413113', '986933399'],
+        celularesExtra: ['', ''],
         dni: '41090114',
         direccion: 'MZ. B LOTE 23 SANTA AURELIA',
         coords: { lat: -12.037583, lng: -76.952389 },
@@ -336,7 +322,7 @@ const MESAS = [
         dni: '47993458',
         direccion: 'CALLE 23 ASOC. RESIDENCIAL SANTA ANITA MZ.B9 LOTE 37',
         coords: { lat: -12.040083, lng: -76.951222 },
-        estado: 'unknow',
+        estado: 'not found - in process',
         nota: ''
       },
       {
