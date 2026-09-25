@@ -215,7 +215,7 @@ const MESAS = [
         dni: '21262908',
         direccion: 'CALLE LOS JILGUEROS 369 URB. SANTA ANITA 2DO SECTOR',
         coords: { lat: -12.047556, lng: -76.966806 },
-        estado: 'Pending',
+        estado: 'success',
         nota: ''
       }
     ]
