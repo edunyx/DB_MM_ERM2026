@@ -119,12 +119,12 @@ const MESAS = [
       {
         cargo: 'PRESIDENTE',
         apellidosNombres: 'HERMAN ALEJANDRO ONCEBAY LINO',
-        celular: '946859363',
+        celular: '902533696',
         celularesExtra: [],
         dni: '75038773',
         direccion: 'CALLE SAN MARCOS MZ. C LOTE 5 AH. SAN MARCOS DE ATE SECTOR',
         coords: { lat: -12.041861, lng: -76.962750 },
-        estado: 'Pending',
+        estado: 'success',
         nota: ''
       },
       {
