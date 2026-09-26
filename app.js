@@ -15,7 +15,7 @@ const MESAS = [
         dni: '76566756',
         direccion: 'CALLE 4 CP NOCHETO MZ. B LOTE 3',
         coords: { lat: -12.044805, lng: -76.985083 },
-        estado: 'Pending',
+        estado: 'Awaiting',
         nota: ''
       },
       {
@@ -48,7 +48,7 @@ const MESAS = [
         dni: '41007813',
         direccion: 'AAHH SAN MARCOS MZ. A LOTE 09',
         coords: { lat: -12.037083, lng: -76.962250 },
-        estado: 'Pending',
+        estado: 'Awaiting',
         nota: ''
       },
       {
@@ -81,7 +81,7 @@ const MESAS = [
         dni: '44772770',
         direccion: 'URB. LOS PRODUCTORES MZ. L LOTE 12',
         coords: { lat: -12.035028, lng: -76.953417 },
-        estado: 'Pending',
+        estado: 'Awaiting',
         nota: ''
       },
       {
@@ -92,7 +92,7 @@ const MESAS = [
         dni: '75693581',
         direccion: 'ASOC. LA ENCALADA MZ. Ñ LOTE 11',
         coords: { lat: -12.032722, lng: -76.958806 },
-        estado: 'Pending',
+        estado: 'Awaiting',
         nota: ''
       },
       {
@@ -160,7 +160,7 @@ const MESAS = [
         dni: '10124838',
         direccion: 'CALLE JUSTINIANO MINAYA SOSA 380 COOP. VIV. LA UNIVERSAL',
         coords: { lat: -12.043306, lng: -76.977472 },
-        estado: 'Pending',
+        estado: 'Awaiting',
         nota: ''
       },
       {
@@ -171,7 +171,7 @@ const MESAS = [
         dni: '09362697',
         direccion: 'LAS GOLONDRINAS 431',
         coords: { lat: -12.051333, lng: -76.964139 },
-        estado: 'Pending',
+        estado: 'Awaiting',
         nota: ''
       },
       {
@@ -182,7 +182,7 @@ const MESAS = [
         dni: '48187335',
         direccion: 'ASOC. PROP. PRADERAS DE SANTA ANITA ETAPA 2 MZ.V LOTE 12',
         coords: { lat: -12.027833, lng: -76.964583 },
-        estado: 'Pending',
+        estado: 'Awaiting',
         nota: ''
       },
       {
@@ -264,7 +264,7 @@ const MESAS = [
         dni: '16803541',
         direccion: 'PARQUE 3 URB. SAN CARLOS MZ. U LOTE 2',
         coords: { lat: -12.035556, lng: -76.959028 },
-        estado: 'Pending',
+        estado: 'Awaiting',
         nota: ''
       },
       {
@@ -300,7 +300,7 @@ const MESAS = [
         dni: '71056146',
         direccion: 'PSJ. SIETE ENSAYOS MZ. 12 LOTE 10',
         coords: { lat: -12.035722, lng: -76.953389 },
-        estado: 'Pending',
+        estado: 'Awaiting',
         nota: ''
       },
       {
@@ -322,7 +322,7 @@ const MESAS = [
         dni: '47993458',
         direccion: 'CALLE 23 ASOC. RESIDENCIAL SANTA ANITA MZ.B9 LOTE 37',
         coords: { lat: -12.040083, lng: -76.951222 },
-        estado: 'Pending',
+        estado: 'Awaiting',
         nota: ''
       },
       {
